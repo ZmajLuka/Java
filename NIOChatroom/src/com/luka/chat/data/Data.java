@@ -15,12 +15,10 @@ import java.util.Date;
 public abstract class Data<T> implements Opcodes {
 
     private final T value;
-    private final Date date;
     private final byte opcode;
 
     protected Data(final byte opcode, final T value) {
           this.value  = value;
-          this.date = new Date();
           this.opcode = opcode;
     }
 
