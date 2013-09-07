@@ -12,7 +12,7 @@ public class Property<T> {
 
     private T value;
 
-    public Property(final T value) {
+    private Property(final T value) {
         this.value = value;
     }
 

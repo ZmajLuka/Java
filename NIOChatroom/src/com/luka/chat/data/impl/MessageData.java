@@ -1,9 +1,7 @@
 package com.luka.chat.data.impl;
 
 import com.luka.chat.data.Data;
-
-import java.nio.ByteBuffer;
-import java.util.ArrayList;
+import com.luka.chat.data.Opcodes;
 
 /**
  * Please do not use maliciously but for educational purposes
@@ -16,14 +14,6 @@ import java.util.ArrayList;
 public class MessageData extends Data<String> {
 
     public MessageData(String value) {
-        super(MESSAGE, value);
-    }
-
-    @Override
-    public ByteBuffer getBuffer() {
-        ByteBuffer buffer = ByteBuffer.allocate(getValue().getBytes().length+1);
-        buffer.put(getOpcode());
-        buffer.put(getValue().getBytes());
-        return buffer;
+        super(Opcodes.MESSAGE, value.getBytes());
     }
 }

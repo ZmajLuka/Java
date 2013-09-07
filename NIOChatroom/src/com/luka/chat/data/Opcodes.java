@@ -8,10 +8,9 @@ package com.luka.chat.data;
  * Time: 21:42
  * To change this template use File | Settings | File Templates.
  */
-public interface Opcodes {
+public class Opcodes {
 
-    byte MESSAGE = 0x1;
-
+ public static final byte MESSAGE = 0x1;
 
 
 }
